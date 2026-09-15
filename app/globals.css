@@ -1,26 +1,282 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Colors — design.md Tokens */
+  --color-bg-canvas: #040719;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #999999;
+  --color-text-muted: #ffffffcc;
+  --color-accent: #5f57ff;
+  --color-bg-surface: #000111;
+  --color-border: #ffffff1f;
+  --color-gray-deep: #000000;
+  --color-blue-dark: #0788f5;
+  --color-blue-deep: #0a132b;
+  --color-blue-violet: #7061fb;
+  --color-green-dark: #14701b;
+
+  /* Uproas variable groups (verbatim rebuild) */
+  --neutral--white: #fff;
+  --blue--1000: #000111;
+  --blue--500: #5f57ff;
+  --blue--800: #0b0c1f;
+  --blue--950: #040719;
+  --neutral--200: #d2d4df;
+  --blue--700: #36395e;
+  --blue--400: #0059ff;
+  --border--white-12: #ffffff1f;
+  --border--white-14: #ffffff24;
+  --neutral--50: #e7e7e7;
+  --blue--600: #4958ff;
+  --neutral--300: #d2dfd4;
+  --blue--750: #191d4b;
+  --blue--900: #03051a;
+  --grey-border: #fff3;
+  --neutral--100: #dcdfea;
+  --neutral--25: #f4f4f4;
+
+  /* Typography */
+  --font-inter: 'Inter', Arial, sans-serif;
+  --font-arial: 'Arial', ui-sans-serif, system-ui, sans-serif;
+  --text-display: 48px;
+  --leading-display: 1.25;
+  --text-heading-lg: 46px;
+  --text-heading: 42px;
+  --text-heading-sm: 38px;
+  --text-subheading: 32px;
+  --text-body: 30px;
+  --text-small: 24px;
+  --text-caption: 22px;
+
+  /* Fluid headings (verbatim) */
+  --_typography---heading--h1: clamp(3rem, 3.7vw, 3.5rem);
+  --_typography---heading--h1-large: clamp(3.25rem, 4.2vw, 4rem);
+  --_typography---heading--h1-small: clamp(2.75rem, 3.5vw, 3.375rem);
+  --_typography---heading--h2: clamp(2.5rem, 3.4vw, 3rem);
+  --_typography---heading--h2-small: clamp(2.1rem, 3.3vw, 2.625rem);
+  --_typography---heading--h3: clamp(1.875rem, 3.15vw, 2.375rem);
+  --_typography---heading--h4: clamp(1.5rem, 3vw, 2rem);
+  --_typography---heading--h5: 1.5rem;
+  --_typography---heading--h6: 1.25rem;
+
+  /* Layout */
+  --page-max-width: 1340px;
+  --shell-max-width: 1260px;
+  --card-padding: 20px;
+  --element-gap: 8px;
+  --spacing-unit: 8px;
+
+  /* Radius — pill is the signature geometry */
+  --radius-pill: 9999px;
+  --radius-1: 1px;
+  --radius-4: 4px;
+  --radius-8: 8px;
+  --radius-12: 12px;
+  --radius-card: 16px;
+
+  /* Shadows */
+  --shadow-sm: rgb(136, 136, 136) 0px 0px 1px 0px;
+  --shadow-md: rgba(96, 174, 255, 0.16) 0px -5.48px 8px 0px inset, rgba(96, 174, 255, 0.16) 0px 2.61px 2.61px 0px inset;
+  --shadow-lg: rgba(14, 18, 27, 0.5) 0px 2px 4px 0px;
+  --shadow-xl: rgba(0, 0, 0, 0.02) 0px 1px 1px 1px;
+  --shadow-4: rgba(0, 0, 0, 0.25) 0px 4px 16px 0px;
+
+  /* Motion */
+  --duration-fast: 200ms;
+  --duration-base: 300ms;
+  --duration-moderate: 600ms;
+  --duration-slow: 2000ms;
+  --ease-custom-1: ease;
+  --ease-custom-2: cubic-bezier(0.01, 0.81, 0.8, 1.01);
+  --ease-custom-3: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-custom-4: linear;
+
+  --focus-ring: #4d65ff;
+  --icon-stroke: 1.6;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@theme {
+  --color-bg-canvas: #040719;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #999999;
+  --color-text-muted: #ffffffcc;
+  --color-accent: #5f57ff;
+  --color-bg-surface: #000111;
+  --color-border: #ffffff1f;
+  --color-gray-deep: #000000;
+  --color-blue-dark: #0788f5;
+  --color-blue-deep: #0a132b;
+  --color-blue-violet: #7061fb;
+  --color-green-dark: #14701b;
+
+  --font-inter: 'Inter', Arial, sans-serif;
+  --font-arial: 'Arial', ui-sans-serif, system-ui, sans-serif;
+
+  --text-display: 48px;
+  --text-heading-lg: 46px;
+  --text-heading: 42px;
+  --text-heading-sm: 38px;
+  --text-subheading: 32px;
+  --text-body: 30px;
+  --text-small: 24px;
+  --text-caption: 22px;
+
+  --shadow-sm: rgb(136, 136, 136) 0px 0px 1px 0px;
+  --shadow-md: rgba(96, 174, 255, 0.16) 0px -5.48px 8px 0px inset, rgba(96, 174, 255, 0.16) 0px 2.61px 2.61px 0px inset;
+  --shadow-lg: rgba(14, 18, 27, 0.5) 0px 2px 4px 0px;
+  --shadow-xl: rgba(0, 0, 0, 0.02) 0px 1px 1px 1px;
+  --shadow-4: rgba(0, 0, 0, 0.25) 0px 4px 16px 0px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-bg-canvas);
+  color: var(--color-text-primary);
+  font-family: var(--font-inter);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Anchor offset — 7 in-page anchors navigate between bands */
+section[id] {
+  scroll-margin-top: 110px;
+}
+
+/* Focus policy: real outline on :focus-visible, ring #4d65ff.
+   Never port `outline:none` without this ring (22 suppressions in source). */
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+/* Buttons / links: default transitions 200-300ms ease (no bounce) */
+a,
+button,
+.button {
+  transition:
+    color var(--duration-fast) var(--ease-custom-1),
+    background-color var(--duration-fast) var(--ease-custom-1),
+    border-color var(--duration-fast) var(--ease-custom-1),
+    filter var(--duration-fast) var(--ease-custom-1),
+    transform var(--duration-base) var(--ease-custom-1),
+    opacity var(--duration-fast) var(--ease-custom-1);
+}
+
+.button-bright:hover {
+  filter: brightness(125%);
+}
+
+.link-card {
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.link-card:hover {
+  transform: translateY(-6px);
+}
+
+.blog-list-image {
+  transition: filter var(--duration-fast) ease;
+}
+.blog-list-image:hover {
+  filter: brightness(85%);
+}
+
+/* Scroll reveal — fired once by IntersectionObserver */
+.reveal {
+  opacity: 0;
+  transform: translateY(14px);
+}
+.reveal.is-visible {
+  animation: reveal-up var(--duration-base) ease both;
+}
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hero pulse (2000ms linear, infinite) */
+@keyframes hero-pulse {
+  from {
+    opacity: 0.5;
+  }
+  70% {
+    opacity: 0;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.hero-pulse {
+  animation: hero-pulse 2000ms linear infinite;
+}
+
+/* Marquee (logo wall) */
+@keyframes marquee-x {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.marquee-track {
+  animation: marquee-x 28s linear infinite;
+}
+
+/* Glass + gradients from spec */
+.glass {
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+.text-gradient-silver {
+  background: linear-gradient(rgb(255, 255, 255), rgb(153, 160, 174));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.btn-glow {
+  box-shadow:
+    rgba(96, 174, 255, 0.16) 0px -5.48px 8px 0px inset,
+    rgba(96, 174, 255, 0.16) 0px 2.61px 2.61px 0px inset;
+}
+
+/* Skip link (absent in source — added for a11y) */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 2000;
+  background: #ffffff;
+  color: #000000;
+  padding: 12px 20px;
+  border-radius: 0 0 12px 0;
+  font-weight: 600;
+}
+.skip-link:focus {
+  left: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
 }
