@@ -28,8 +28,8 @@ export default function BookingSection() {
 
         {/* ১. মেইন আর্ক এবং ড্যাশ লাইন (SVG) */}
         <svg
-          className="absolute bottom-0 w-[150%] md:w-[120%] max-w-[1300px] h-auto min-h-[500px]"
-          viewBox="-100 -155 1400 800"  // <--- এখানে viewBox পরিবর্তন করা হয়েছে
+          className="absolute bottom-0 w-[150%] md:w-[120%] max-w-[1200px] h-auto min-h-[500px]"
+          viewBox="-50 -160 1300 900"  // <--- এখানে viewBox পরিবর্তন করা হয়েছে
           preserveAspectRatio="xMidYMax meet" // <--- slice এর পরিবর্তে meet করা হয়েছে
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
