@@ -11,7 +11,7 @@ export function Faq({ items }) {
         return (
           <div
             key={item.q}
-            className="rounded-2xl border border-white/[0.15] bg-[#040719]"
+            className="rounded-2xl border border-white/[0.12] bg-[#040719]"
           >
             <button
               type="button"
@@ -60,11 +60,11 @@ export function NewsletterForm() {
         type="email"
         required
         placeholder="johndoe32@gmail.com"
-        className="h-[44px] w-full flex-1 rounded-xl border border-white/[0.12] bg-[#0d152ecc] px-4 text-base text-white placeholder:text-[#999999]"
+        className="h-[50px] w-full flex-1 rounded-full border border-white/[0.12] bg-[#0b0c1f] px-5 text-base text-white placeholder:text-[#999999]"
       />
       <button
         type="submit"
-        className="button-bright inline-flex min-h-[44px] items-center justify-center rounded-full bg-[#5f57ff] px-6 text-sm font-medium text-white"
+        className="button-bright btn-glow inline-flex min-h-[50px] items-center justify-center rounded-full bg-[#5f57ff] px-6 text-sm font-medium text-white"
       >
         {sent ? "Check Your Inbox" : "Get Access"}
       </button>

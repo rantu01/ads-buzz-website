@@ -16,7 +16,7 @@ export default function Header() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-[1000] h-[89px] border-b border-[#ffffff1f] bg-[#000111]/95 backdrop-blur-[32px]">
-      <div className="mx-auto flex h-full w-full max-w-[1260px] items-center justify-between px-5 md:px-10">
+      <div className="mx-auto flex h-full w-full max-w-[1260px] items-center justify-between px-5 md:px-8">
         <a
           href="#top"
           className="flex min-h-[44px] items-center gap-2.5"

@@ -71,33 +71,33 @@ export default function AdSolutions() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#05070C] text-white font-sans flex items-center justify-center py-20 px-4 selection:bg-blue-500/30">
-      <div className="max-w-[1200px] w-full mx-auto">
-        
+    <section aria-labelledby="platforms-heading" className="bg-[#000111] text-white font-sans py-20 md:py-24 selection:bg-blue-500/30">
+      <div className="max-w-[1260px] w-full mx-auto px-5 md:px-8">
+
         {/* === হেডার সেকশন === */}
         <div className="mb-12">
-          <p className="text-[#3B82F6] text-sm md:text-base font-semibold tracking-wider mb-3 uppercase">
+          <p className="text-[#3B82F6] text-sm font-semibold tracking-[0.14em] mb-4 uppercase">
             Enterprise Ad Solutions
           </p>
-          <h1 className="text-4xl md:text-5xl lg:text-[56px] font-bold leading-[1.1] mb-6 tracking-tight">
+          <h2 id="platforms-heading" className="font-semibold tracking-[-1px] leading-[1.15] mb-6" style={{ fontSize: "var(--_typography---heading--h2)" }}>
             Limitless Scaling with Agency Ad Accounts <br className="hidden md:block" />
             Across All Platforms
-          </h1>
-          
+          </h2>
+
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8">
-            <p className="text-gray-400 text-base md:text-lg max-w-2xl leading-relaxed">
+            <p className="text-[#999999] text-base max-w-2xl leading-6">
               We work with all major social media platforms to provide enterprise-tier solutions for businesses of all sizes. Forget about advertising limitations, restrictions and unsustainable campaigns.
             </p>
-            
+
             {/* অ্যাকশন বাটন */}
-            <div className="flex items-center gap-4 shrink-0">
-              <button className="px-6 py-3 rounded-lg bg-[#111827] border border-white/10 hover:bg-white/5 transition-colors font-medium text-sm md:text-base">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 shrink-0">
+              <a href="#cta" className="button-bright inline-flex min-h-[50px] items-center justify-center rounded-full border border-white/[0.12] bg-white/[0.05] px-7 text-base font-medium text-white hover:bg-[#0b0c1f]">
                 Learn more
-              </button>
-              <button className="px-6 py-3 rounded-lg bg-[#111827] border border-white/10 hover:bg-white/5 transition-colors font-medium text-sm md:text-base flex items-center gap-2 group">
-                Get Started 
+              </a>
+              <a href="#cta" className="button-bright btn-glow inline-flex min-h-[50px] items-center justify-center gap-2 rounded-full bg-[#5f57ff] px-7 text-base font-medium text-white group">
+                Get Started
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -105,9 +105,9 @@ export default function AdSolutions() {
         {/* === কার্ড গ্রিড সেকশন === */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {adPlatforms.map((platform, index) => (
-            <div 
-              key={index} 
-              className="group p-6 rounded-2xl border border-white/[0.08] bg-[#0A0E17] hover:bg-[#0D121F] hover:border-white/[0.15] transition-all duration-300 flex flex-col gap-5"
+            <div
+              key={index}
+              className="link-card group p-6 rounded-2xl border border-white/[0.12] bg-[#040719] hover:border-white/[0.2] transition-all duration-300 flex flex-col gap-5"
             >
               {/* আইকন এবং টাইটেল */}
               <div className="flex items-center gap-4">
@@ -118,9 +118,9 @@ export default function AdSolutions() {
                   {platform.title}
                 </h3>
               </div>
-              
+
               {/* ডেসক্রিপশন */}
-              <p className="text-gray-400 text-sm leading-relaxed">
+              <p className="text-[#999999] text-sm leading-6">
                 {platform.description}
               </p>
             </div>
@@ -128,6 +128,6 @@ export default function AdSolutions() {
         </div>
 
       </div>
-    </div>
+    </section>
   );
 }
