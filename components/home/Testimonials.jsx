@@ -72,17 +72,17 @@ export default function Testimonials() {
   };
 
   return (
-    <section aria-labelledby="testimonials-heading" className="bg-[#000111] text-white font-sans py-20 md:py-24 px-5 md:px-8 selection:bg-blue-500/30 overflow-hidden">
+    <section aria-labelledby="testimonials-heading" className="bg-[#000111] text-white font-[var(--font-inter)] py-20 md:py-24 px-5 md:px-8 selection:bg-[#5f57ff]/30 overflow-hidden">
 
       {/* === মেইন গ্লো কন্টেইনার === */}
-      <div className="relative w-full max-w-[1200px] mx-auto rounded-[32px] bg-gradient-to-b from-[#0A101D] to-[#040719] border border-white/[0.12] shadow-[0_0_80px_rgba(10,20,50,0.8)] py-16 px-5 md:px-12 overflow-hidden flex flex-col items-center">
+      <div className="relative w-full max-w-[1200px] mx-auto rounded-[32px] bg-gradient-to-b from-[#0b0c1f] to-[#040719] border border-white/[0.12] shadow-[0_0_80px_rgba(10,20,50,0.8)] py-16 px-5 md:px-12 overflow-hidden flex flex-col items-center">
 
         {/* ব্যাকগ্রাউন্ড গ্লো ইফেক্ট */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-[#5f57ff]/10 blur-[120px] rounded-full pointer-events-none z-0"></div>
 
         {/* === হেডার সেকশন === */}
         <div className="relative z-10 flex flex-col items-center text-center mb-12">
-          <p className="text-[#3B82F6] text-sm font-semibold tracking-[0.14em] mb-4 uppercase">
+          <p className="text-[#5f57ff] text-sm font-semibold tracking-[0.14em] mb-4 uppercase">
             Testimonials
           </p>
           <h2 id="testimonials-heading" className="font-semibold tracking-[-1px] leading-[1.15] mb-4" style={{ fontSize: "var(--_typography---heading--h2)" }}>
@@ -112,7 +112,7 @@ export default function Testimonials() {
             onClick={prevSlide}
             disabled={safeIndex === 0}
             aria-label="Previous testimonials"
-            className={`hidden md:flex shrink-0 w-11 h-11 rounded-full border border-white/[0.12] items-center justify-center transition-colors ${safeIndex === 0 ? 'bg-white/5 text-gray-600 cursor-not-allowed' : 'bg-[#0b0c1f] hover:bg-white/10 text-[#d2d4df]'}`}
+            className={`hidden md:flex shrink-0 w-11 h-11 rounded-full border border-white/[0.12] items-center justify-center transition-colors ${safeIndex === 0 ? 'bg-white/5 text-[#999999]/40 cursor-not-allowed' : 'bg-[#0b0c1f] hover:bg-white/10 text-[#d2d4df]'}`}
           >
             <ChevronLeft size={20} />
           </button>
@@ -184,7 +184,7 @@ export default function Testimonials() {
             onClick={nextSlide}
             disabled={safeIndex >= maxIndex}
             aria-label="Next testimonials"
-            className={`hidden md:flex shrink-0 w-11 h-11 rounded-full border border-white/[0.12] items-center justify-center transition-colors ${safeIndex >= maxIndex ? 'bg-white/5 text-gray-600 cursor-not-allowed' : 'bg-[#0b0c1f] hover:bg-white/10 text-[#d2d4df]'}`}
+            className={`hidden md:flex shrink-0 w-11 h-11 rounded-full border border-white/[0.12] items-center justify-center transition-colors ${safeIndex >= maxIndex ? 'bg-white/5 text-[#999999]/40 cursor-not-allowed' : 'bg-[#0b0c1f] hover:bg-white/10 text-[#d2d4df]'}`}
           >
             <ChevronRight size={20} />
           </button>
@@ -196,7 +196,7 @@ export default function Testimonials() {
             onClick={prevSlide}
             disabled={safeIndex === 0}
             aria-label="Previous testimonials"
-            className={`w-11 h-11 rounded-full border border-white/[0.12] flex items-center justify-center transition-colors ${safeIndex === 0 ? 'bg-white/5 text-gray-600' : 'bg-[#0b0c1f] text-[#d2d4df]'}`}
+            className={`w-11 h-11 rounded-full border border-white/[0.12] flex items-center justify-center transition-colors ${safeIndex === 0 ? 'bg-white/5 text-[#999999]/40' : 'bg-[#0b0c1f] text-[#d2d4df]'}`}
           >
             <ChevronLeft size={20} />
           </button>
@@ -204,7 +204,7 @@ export default function Testimonials() {
             onClick={nextSlide}
             disabled={safeIndex >= maxIndex}
             aria-label="Next testimonials"
-            className={`w-11 h-11 rounded-full border border-white/[0.12] flex items-center justify-center transition-colors ${safeIndex >= maxIndex ? 'bg-white/5 text-gray-600' : 'bg-[#0b0c1f] text-[#d2d4df]'}`}
+            className={`w-11 h-11 rounded-full border border-white/[0.12] flex items-center justify-center transition-colors ${safeIndex >= maxIndex ? 'bg-white/5 text-[#999999]/40' : 'bg-[#0b0c1f] text-[#d2d4df]'}`}
           >
             <ChevronRight size={20} />
           </button>

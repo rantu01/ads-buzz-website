@@ -21,91 +21,22 @@ export default function BookingSection() {
   ];
 
   return (
-    <div className="bg-[#000111] text-white font-sans overflow-hidden relative flex flex-col items-center py-20 selection:bg-blue-500/30 ">
+    <div className="bg-[#000111] text-white font-[var(--font-inter)] overflow-hidden relative flex flex-col items-center py-20 selection:bg-[#5f57ff]/30">
 
-      {/* ================= BACKGROUND SECTION (SVG BASED) ================= */}
-      <div className="absolute inset-0 w-full h-full overflow-hidden z-0 pointer-events-none flex justify-center my-20">
-
-        {/* ১. মেইন আর্ক এবং ড্যাশ লাইন (SVG) */}
-        <svg
-          className="absolute bottom-0 w-[150%] md:w-[120%] max-w-[1200px] h-auto min-h-[500px]"
-          viewBox="-50 -160 1300 900"  // <--- এখানে viewBox পরিবর্তন করা হয়েছে
-          preserveAspectRatio="xMidYMax meet" // <--- slice এর পরিবর্তে meet করা হয়েছে
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <defs>
-            {/* বাইরের কার্ভের গ্রেডিয়েন্ট (উজ্জ্বল নীল থেকে ট্রান্সপারেন্ট) */}
-            <linearGradient id="glowArc" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor="#6A7BFF" stopOpacity="0.7" />
-              <stop offset="40%" stopColor="#3B4EFF" stopOpacity="0.2" />
-              <stop offset="100%" stopColor="#000111" stopOpacity="0" />
-            </linearGradient>
-
-            {/* ভেতরের গ্লো (অন্ধকার নীল) */}
-            <linearGradient id="innerGlow" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor="#2A3BDB" stopOpacity="0.5" />
-              <stop offset="100%" stopColor="#000111" stopOpacity="0" />
-            </linearGradient>
-          </defs>
-
-          {/* স্তর ১: বাইরের সবচেয়ে বড় আর্ক (গ্লো) */}
-          <path
-            d="M -100 600 A 700 700 0 0 1 1300 600"
-            stroke="url(#glowArc)"
-            strokeWidth="120"
-            strokeLinecap="round"
-          />
-
-          {/* স্তর ২: সলিড আর্ক লাইন */}
-          <path
-            d="M -100 600 A 650 650 0 0 1 1300 600"
-            stroke="#3B4EFF"
-            strokeWidth="1.5"
-            strokeOpacity="0.8"
-          />
-
-          {/* স্তর ৩: ড্যাশড আর্ক লাইন (মাঝখানের ডটেড কার্ভ) */}
-          <path
-            d="M -100 600 A 600 600 0 0 1 1300 600"
-            stroke="#8A9AFF"
-            strokeWidth="2"
-            strokeDasharray="4 8"
-            strokeOpacity="0.4"
-          />
-
-          {/* স্তর ৪: ভেতরের সলিড আর্ক */}
-          <path
-            d="M 50 600 A 550 550 0 0 1 1150 600"
-            stroke="#2A3BDB"
-            strokeWidth="1"
-            strokeOpacity="0.5"
-          />
-
-          {/* স্তর ৫: ভেতরের ড্যাশড আর্ক */}
-          <path
-            d="M 150 600 A 450 450 0 0 1 1050 600"
-            stroke="#8A9AFF"
-            strokeWidth="1.5"
-            strokeDasharray="3 10"
-            strokeOpacity="0.2"
-          />
-
-          {/* স্তর ৬: গ্লো ফিল (নিচের দিকের আলো) */}
-          <path
-            d="M 150 600 A 450 450 0 0 1 1050 600 L 1050 600 L 150 600 Z"
-            fill="url(#innerGlow)"
-          />
-        </svg>
-
-
-
+      {/* ================= BACKGROUND SECTION (LOCAL IMAGE) ================= */}
+      <div className="absolute inset-0 w-full h-full overflow-hidden z-0 pointer-events-none flex justify-center items-end">
+        <div 
+          className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat opacity-100"
+          style={{ backgroundImage: `url('/bg-img/img-3.png')` }}
+        ></div>
+        {/* ব্ল্যাক গ্রেডিয়েন্ট ওভারলে যাতে নিচের দিকটা ভালোভাবে মিশে যায় */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#000111] via-transparent to-[#000111]"></div>
       </div>
       {/* ================= END BACKGROUND SECTION ================= */}
 
 
       {/* ================= MAIN CONTENT ================= */}
-      <div className="relative z-10 w-full max-w-[1260px] mx-auto flex flex-col items-center px-5 md:px-8">
+      <div className="relative z-10 w-full max-w-[1260px] mx-auto flex flex-col items-center px-5 md:px-8 mt-2">
 
         {/* === লোগো সেকশন === */}
         <div className="w-full flex flex-col items-center justify-center gap-8 mb-20 opacity-60 overflow-hidden relative">
@@ -169,10 +100,10 @@ export default function BookingSection() {
             <div className="flex justify-center items-center py-4 border-b border-white/[0.12] relative bg-white/[0.02]">
               <div className="flex items-center gap-8 text-sm font-medium">
                 <button onClick={() => setActiveTab('form')} className={`flex items-center gap-2 transition-colors ${activeTab === 'form' ? 'text-white' : 'text-[#999999]'}`}>
-                  <div className={`w-2 h-2 rounded-full ${activeTab === 'form' ? 'bg-[#5f57ff]' : 'bg-gray-600'}`}></div> Fill out the form
+                  <div className={`w-2 h-2 rounded-full ${activeTab === 'form' ? 'bg-[#5f57ff]' : 'bg-white/[0.12]'}`}></div> Fill out the form
                 </button>
                 <button onClick={() => setActiveTab('calendar')} className={`flex items-center gap-2 transition-colors ${activeTab === 'calendar' ? 'text-white' : 'text-[#999999]'}`}>
-                  <div className={`w-2 h-2 rounded-full ${activeTab === 'calendar' ? 'bg-[#5f57ff]' : 'bg-gray-600'}`}></div> Book your event
+                  <div className={`w-2 h-2 rounded-full ${activeTab === 'calendar' ? 'bg-[#5f57ff]' : 'bg-white/[0.12]'}`}></div> Book your event
                 </button>
               </div>
             </div>
@@ -183,7 +114,7 @@ export default function BookingSection() {
               <div className="p-8 border-b md:border-b-0 md:border-r border-white/[0.12] relative">
                 <div className="flex items-center gap-2 mb-6">
                   <div className="w-5 h-5 bg-gradient-to-tr from-[#5f57ff] to-[#60aeff] rounded-sm transform -skew-x-12"></div>
-                  <span className="font-semibold text-lg tracking-wide">uproas</span>
+                  <span className="font-semibold text-lg tracking-wide">adsbuzz</span>
                 </div>
                 <h2 className="text-2xl font-semibold tracking-tight mb-2">Agency Ad Accounts | Strategy Call</h2>
                 <p className="text-[#999999] text-sm mb-8">Let&apos;s scale your business without limits!</p>
@@ -199,7 +130,7 @@ export default function BookingSection() {
                     <input type="text" placeholder="Name *" aria-label="Name" className="w-full bg-transparent px-4 py-3 outline-none text-white placeholder-[#999999]" />
                   </div>
                   <p className="text-[11px] text-[#999999] leading-relaxed mt-2">
-                    By entering your information, you consent to your data being saved in accordance with our <a href="#" className="underline hover:text-gray-300">Terms & Privacy Policy</a>.
+                    By entering your information, you consent to your data being saved in accordance with our <a href="#" className="underline hover:text-[#d2d4df]">Terms & Privacy Policy</a>.
                   </p>
                   <button type="button" className="button-bright btn-glow w-full mt-4 bg-[#5f57ff] text-white font-medium py-3 rounded-full flex justify-center items-center gap-2 transition-colors min-h-[50px]">
                     Continue <ChevronRight size={18} />
@@ -222,13 +153,13 @@ export default function BookingSection() {
                     const isSelected = day === 21 || day === 22 || day === 23;
                     const isCurrentMonth = index >= 2 && index <= 31;
                     return (
-                      <div key={index} className={`py-2.5 rounded-md flex items-center justify-center text-sm ${!isCurrentMonth ? 'text-gray-700' : 'text-[#d2d4df]'} ${isSelected ? 'bg-[#2A2A3B] border border-white/[0.12] shadow-sm' : 'hover:bg-white/5 cursor-pointer'}`}>
+                      <div key={index} className={`py-2.5 rounded-md flex items-center justify-center text-sm ${!isCurrentMonth ? 'text-[#999999]/40' : 'text-[#d2d4df]'} ${isSelected ? 'bg-[#5f57ff]/20 border border-white/[0.12] shadow-sm' : 'hover:bg-white/5 cursor-pointer'}`}>
                         {day}
                       </div>
                     );
                   })}
                 </div>
-                <div className="absolute top-[55%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[85%] bg-[#1A1A2E] border border-white/[0.12] p-3 rounded-xl text-center shadow-2xl">
+                <div className="absolute top-[55%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[85%] bg-[#0b0c1f] border border-white/[0.12] p-3 rounded-xl text-center shadow-2xl">
                   <p className="text-xs text-[#d2d4df]">Please fill out the form before choosing your time slot.</p>
                 </div>
               </div>

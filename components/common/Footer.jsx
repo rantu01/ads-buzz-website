@@ -5,10 +5,13 @@ export default function Footer() {
     <footer className="border-t border-[#ffffff1f] bg-[#000111]">
       <div className={`${SHELL} grid gap-10 py-14 md:grid-cols-[1.2fr_1fr]`}>
         <div>
-          <p className="flex items-center gap-2.5 text-lg font-semibold">
-            <span aria-hidden="true" className="flex h-9 w-9 items-center justify-center rounded-full bg-[#5f57ff] text-[17px] font-bold">A</span>
-            AdsBuzz
-          </p>
+          <span className="flex items-center">
+            <img
+              src="/logo/Adsbuzz logo-White@2x.png"
+              alt="AdsBuzz"
+              className="h-[28px] w-auto object-contain"
+            />
+          </span>
           <p className="mt-3 max-w-sm text-sm leading-6 text-[#999999]">
             Premium agency ad accounts with unlimited spend, zero bans and instant
             approval. Scale your campaigns without limits.

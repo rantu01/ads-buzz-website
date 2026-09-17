@@ -38,12 +38,12 @@ export default function HowItWorks() {
   ];
 
   return (
-    <section aria-labelledby="how-it-works-heading" className="bg-[#000111] text-white font-sans py-20 md:py-24 selection:bg-blue-500/30">
+    <section aria-labelledby="how-it-works-heading" className="bg-[#000111] text-white font-[var(--font-inter)] py-20 md:py-24 selection:bg-[#5f57ff]/30">
       <div className="max-w-[1260px] w-full mx-auto px-5 md:px-8 flex flex-col items-center">
 
         {/* === হেডার সেকশন === */}
         <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-12">
-          <p className="text-[#3B82F6] text-sm font-semibold tracking-[0.14em] mb-4 uppercase">
+          <p className="text-[#5f57ff] text-sm font-semibold tracking-[0.14em] mb-4 uppercase">
             How It Works
           </p>
           <h2 id="how-it-works-heading" className="font-semibold tracking-[-1px] leading-[1.15] mb-5" style={{ fontSize: "var(--_typography---heading--h2)" }}>
@@ -73,7 +73,7 @@ export default function HowItWorks() {
                     {item.title}
                   </h3>
                   {/* স্টেপ ব্যাজ */}
-                  <span className="text-[10px] font-bold text-[#4ADE80] bg-[#4ADE80]/10 px-2 py-0.5 rounded-full uppercase tracking-[0.14em]">
+                  <span className="text-[10px] font-bold text-[#5f57ff] bg-[#5f57ff]/10 px-2 py-0.5 rounded-full uppercase tracking-[0.14em]">
                     {item.step}
                   </span>
                 </div>

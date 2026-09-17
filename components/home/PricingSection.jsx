@@ -132,14 +132,14 @@ export default function PricingSection() {
       case 'platinum':
         return { border: 'border-[#1A3A5A]', bg: 'bg-gradient-to-b from-[#0E2A4A] to-[#040719]', btn: 'bg-[#60A5FA] text-black hover:bg-[#3B82F6]', badge: 'text-[#60A5FA] bg-[#60A5FA]/10' };
       case 'titanium':
-        return { border: 'border-[#3A3A3A]', bg: 'bg-gradient-to-b from-[#2A2A2A] to-[#040719]', btn: 'bg-white text-black hover:bg-gray-200', badge: 'text-white bg-white/10' };
+        return { border: 'border-[#3A3A3A]', bg: 'bg-gradient-to-b from-[#2A2A2A] to-[#040719]', btn: 'bg-white text-black hover:bg-[#e7e7e7]', badge: 'text-white bg-white/10' };
       default:
         return { border: 'border-white/[0.12]', bg: 'bg-[#040719]', btn: 'bg-white text-black', badge: 'text-white bg-white/10' };
     }
   };
 
   return (
-    <section id="pricing" aria-labelledby="pricing-heading" className="bg-[#000111] text-white font-sans py-20 md:py-24 selection:bg-blue-500/30">
+    <section id="pricing" aria-labelledby="pricing-heading" className="bg-[#000111] text-white font-[var(--font-inter)] py-20 md:py-24 selection:bg-[#5f57ff]/30">
       <div className="max-w-[1260px] mx-auto px-5 md:px-8 flex flex-col items-center">
 
         {/* === টপ সেকশন === */}

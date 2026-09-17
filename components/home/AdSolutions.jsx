@@ -71,12 +71,12 @@ export default function AdSolutions() {
   ];
 
   return (
-    <section aria-labelledby="platforms-heading" className="bg-[#000111] text-white font-sans py-20 md:py-24 selection:bg-blue-500/30">
+    <section aria-labelledby="platforms-heading" className="bg-[#000111] text-white font-[var(--font-inter)] py-20 md:py-24 selection:bg-[#5f57ff]/30">
       <div className="max-w-[1260px] w-full mx-auto px-5 md:px-8">
 
         {/* === হেডার সেকশন === */}
         <div className="mb-12">
-          <p className="text-[#3B82F6] text-sm font-semibold tracking-[0.14em] mb-4 uppercase">
+          <p className="text-[#5f57ff] text-sm font-semibold tracking-[0.14em] mb-4 uppercase">
             Enterprise Ad Solutions
           </p>
           <h2 id="platforms-heading" className="font-semibold tracking-[-1px] leading-[1.15] mb-6" style={{ fontSize: "var(--_typography---heading--h2)" }}>

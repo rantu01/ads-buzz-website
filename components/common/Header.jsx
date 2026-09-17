@@ -22,14 +22,23 @@ export default function Header() {
           className="flex min-h-[44px] items-center gap-2.5"
           aria-label="AdsBuzz home"
         >
-          <span
+          {/* <span
             aria-hidden="true"
-            className="flex h-9 w-9 items-center justify-center rounded-full bg-[#5f57ff] text-[17px] font-bold text-white"
+            className="flex h-9 w-9 items-center justify-center"
           >
-            A
-          </span>
-          <span className="text-[17px] font-semibold tracking-tight text-white">
-            AdsBuzz
+            <img
+              src="/logo/Adbuzz Icon Blue@2x.png"
+              alt=""
+              className="h-9 w-9 object-contain"
+            />
+          </span> */}
+
+          <span className="flex items-center">
+            <img
+              src="/logo/Adsbuzz logo-White@2x.png"
+              alt="AdsBuzz"
+              className="h-[28px] w-auto object-contain"
+            />
           </span>
         </a>
 

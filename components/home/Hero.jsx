@@ -65,7 +65,7 @@ export default function Hero() {
             <div className="mt-5 flex items-center gap-3 rounded-xl border border-white/[0.12] bg-[#000111] p-3">
               <span aria-hidden="true" className="flex h-10 w-10 items-center justify-center rounded-full bg-[#5f57ff] font-semibold">U</span>
               <div>
-                <p className="text-sm font-medium">Uproas Connection Active</p>
+                <p className="text-sm font-medium">AdsBuzz Connection Active</p>
                 <p className="text-xs text-[#999999]">Meta · Google · TikTok linked</p>
               </div>
             </div>

@@ -11,7 +11,7 @@ export default function BenefitsSection() {
       image: (
         <div className="w-full h-full bg-[#040719] flex flex-col justify-center items-center p-6 border-b border-white/[0.12] relative overflow-hidden">
            <div className="w-full flex justify-between items-center mb-4 z-10">
-             <span className="text-[#5f57ff] font-bold italic text-lg">uproas</span>
+              <span className="text-[#5f57ff] font-bold italic text-lg">adsbuzz</span>
              <span className="text-[#999999] text-xs">SALARY</span>
            </div>
            <div className="w-full text-center z-10">
@@ -19,8 +19,8 @@ export default function BenefitsSection() {
            </div>
            <div className="w-full flex justify-between items-center mt-6 z-10">
              <div className="flex gap-2">
-                <div className="w-6 h-4 bg-red-500 rounded-sm"></div>
-                <div className="w-6 h-4 bg-yellow-500 rounded-sm"></div>
+                <div className="w-6 h-4 bg-[#5f57ff] rounded-sm"></div>
+                <div className="w-6 h-4 bg-[#d2d4df] rounded-sm"></div>
              </div>
              <span className="text-[#999999] text-[10px]">01/25</span>
            </div>
@@ -33,18 +33,18 @@ export default function BenefitsSection() {
       title: "Run Aggressive D2C Claims",
       description: "Unlock explosive growth with bold, high-impact offers designed for direct-to-consumer brands.",
       image: (
-        <div className="w-full h-full bg-gradient-to-b from-[#2E1065] to-[#040719] flex flex-col justify-center items-center p-4 border-b border-white/[0.12] relative">
+        <div className="w-full h-full bg-gradient-to-b from-[#191d4b] to-[#040719] flex flex-col justify-center items-center p-4 border-b border-white/[0.12] relative">
            <div className="text-center mb-4 z-10">
              <h3 className="text-xl font-semibold text-white">Lose 5 KG</h3>
              <p className="text-sm text-[#d2d4df]">in 2 Days</p>
            </div>
            <div className="flex items-center gap-4 z-10">
-             <div className="w-16 h-24 bg-purple-500/30 rounded-t-full border border-purple-400/50 flex items-end justify-center pb-1">
-                <span className="text-[10px] text-purple-200">Before</span>
+              <div className="w-16 h-24 bg-[#5f57ff]/20 rounded-t-full border border-[#5f57ff]/30 flex items-end justify-center pb-1">
+                 <span className="text-[10px] text-[#d2d4df]">Before</span>
              </div>
              <ArrowRight className="text-white w-5 h-5" />
              <div className="w-16 h-24 bg-[#5f57ff]/30 rounded-t-full border border-[#5f57ff]/50 flex items-end justify-center pb-1">
-                <span className="text-[10px] text-blue-200">After</span>
+                 <span className="text-[10px] text-[#d2d4df]">After</span>
              </div>
            </div>
         </div>
@@ -62,8 +62,8 @@ export default function BenefitsSection() {
                  <Eye className="w-7 h-7 text-[#d2d4df]" />
               </div>
            </div>
-           <div className="absolute top-4 right-4 text-green-500 text-xl font-bold z-10">$</div>
-           <div className="absolute bottom-4 left-4 text-green-500 text-xl font-bold z-10">$</div>
+            <div className="absolute top-4 right-4 text-[#d2d4df] text-xl font-bold z-10">$</div>
+            <div className="absolute bottom-4 left-4 text-[#d2d4df] text-xl font-bold z-10">$</div>
         </div>
       )
     },
@@ -71,7 +71,7 @@ export default function BenefitsSection() {
       title: "Reduce Bans & Restrictions",
       description: "Stop losing days to restrictions. Run ads with whitelisted accounts that have unlimited spend, instant replacements, and dedicated support.",
       image: (
-        <div className="w-full h-full bg-gradient-to-tr from-[#1E3A8A] to-[#040719] flex justify-center items-end border-b border-white/[0.12] relative overflow-hidden">
+        <div className="w-full h-full bg-gradient-to-tr from-[#191d4b] to-[#040719] flex justify-center items-end border-b border-white/[0.12] relative overflow-hidden">
            {/* Placeholder for Soldier Image */}
            <div className="w-32 h-32 bg-[#5f57ff]/20 rounded-t-full border-t border-x border-[#5f57ff]/30 flex items-end justify-center pb-2 relative z-10">
               <div className="w-12 h-12 bg-[#5f57ff]/40 rounded-full mb-2"></div>
@@ -142,8 +142,8 @@ export default function BenefitsSection() {
               <span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span>
            </div>
            <div className="flex justify-end gap-4 text-[10px] text-[#d2d4df]">
-              <div className="flex items-center gap-1"><div className="w-2 h-2 rounded-full bg-[#5f57ff]"></div> Uproas</div>
-              <div className="flex items-center gap-1"><div className="w-2 h-2 rounded-full bg-gray-500"></div> Others</div>
+               <div className="flex items-center gap-1"><div className="w-2 h-2 rounded-full bg-[#5f57ff]"></div> AdsBuzz</div>
+               <div className="flex items-center gap-1"><div className="w-2 h-2 rounded-full bg-[#999999]"></div> Others</div>
            </div>
            <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-[#5f57ff]/10 via-transparent to-transparent"></div>
         </div>
@@ -159,7 +159,7 @@ export default function BenefitsSection() {
            </div>
            <div className="w-8 h-2 bg-[#5f57ff] rounded-full z-0"></div>
            <div className="w-16 h-16 bg-[#0b0c1f] border border-white/[0.12] rounded-xl flex items-center justify-center transform rotate-6 shadow-lg z-10">
-              <span className="text-white font-mono font-bold">{'</>'}</span>
+               <span className="text-white font-bold">{'</>'}</span>
            </div>
            <div className="absolute inset-0 bg-[#5f57ff]/5 blur-xl"></div>
         </div>
@@ -185,12 +185,12 @@ export default function BenefitsSection() {
   ];
 
   return (
-    <section aria-labelledby="benefits-heading" className="bg-[#000111] text-white font-sans py-20 md:py-24 selection:bg-blue-500/30">
+    <section aria-labelledby="benefits-heading" className="bg-[#000111] text-white font-[var(--font-inter)] py-20 md:py-24 selection:bg-[#5f57ff]/30">
       <div className="max-w-[1260px] w-full mx-auto px-5 md:px-8">
 
         {/* === হেডার সেকশন === */}
         <div className="mb-12">
-          <p className="text-[#3B82F6] text-sm font-semibold tracking-[0.14em] mb-4 uppercase">
+          <p className="text-[#5f57ff] text-sm font-semibold tracking-[0.14em] mb-4 uppercase">
             Benefits
           </p>
 
