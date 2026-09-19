@@ -63,16 +63,16 @@ export default function Home() {
         <Testimonials2></Testimonials2>       
 
         {/* 14 · TEAM */}
-        {/* <MeetTheTeam></MeetTheTeam> */}
+        <MeetTheTeam></MeetTheTeam>
 
         {/* 15 · BLOG */}
-        {/* <LatestBlogs></LatestBlogs> */}
+        <LatestBlogs></LatestBlogs>
 
         {/* 16 · YOUTUBE */}
-        {/* <YoutubeSection></YoutubeSection> */}
+        <YoutubeSection></YoutubeSection>
 
         {/* 16 · CTA */}
-        {/* <CallToActionBanner></CallToActionBanner> */}
+        <CallToActionBanner></CallToActionBanner>
       </main>
 
       <Footer />
